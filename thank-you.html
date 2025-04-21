@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #343a40;
+        }
+        .confirmation-box {
+            background-color: white;
+            border-radius: 8px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .success-icon {
+            color: #28a745;
+            font-size: 80px;
+            margin-bottom: 20px;
+        }
+        .order-details {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .order-details table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .order-details th, .order-details td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        .order-details th {
+            background-color: #f8f9fa;
+        }
+        .total-row td {
+            font-weight: bold;
+            font-size: 18px;
+            padding-top: 20px;
+        }
+        .btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background-color: #0069d9;
+        }
+        .shipping-info {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+        .shipping-info h4 {
+            margin-bottom: 15px;
+            color: #343a40;
+        }
+        .info-row {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        .info-label {
+            font-weight: bold;
+            width: 150px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            color: #6c757d;
+            font-size: 14px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>eCommerce Store</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="confirmation-box">
+            <div class="success-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+            </div>
+            <h2>Thank You for Your Order!</h2>
+            <p>Your order has been placed successfully and is now being processed.</p>
+            <p>Order Number: <strong>#ORD-12345</strong></p>
+            <p>A confirmation email has been sent to your email address.</p>
+        </div>
+
+        <div class="order-details">
+            <h3>Order Summary</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Product 1</td>
+                        <td>1</td>
+                        <td>$49.99</td>
+                    </tr>
+                    <tr>
+                        <td>Product 2</td>
+                        <td>2</td>
+                        <td>$29.99</td>
+                    </tr>
+                    <tr>
+                        <td>Shipping</td>
+                        <td></td>
+                        <td>$5.99</td>
+                    </tr>
+                    <tr class="total-row">
+                        <td colspan="2">Total</td>
+                        <td>$115.96</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="shipping-info">
+                <h4>Shipping Information</h4>
+                <div class="info-row">
+                    <div class="info-label">Name:</div>
+                    <div>John Doe</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Address:</div>
+                    <div>123 Main Street, Apt 4B</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">City:</div>
+                    <div>New York</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Postal Code:</div>
+                    <div>10001</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Country:</div>
+                    <div>United States</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Phone:</div>
+                    <div>+1 (555) 123-4567</div>
+                </div>
+            </div>
+
+            <div class="shipping-info">
+                <h4>Payment Information</h4>
+                <div class="info-row">
+                    <div class="info-label">Payment Method:</div>
+                    <div>Credit Card</div>
+                </div>
+                <div class="info-row">
+                    <div class="info-label">Card Number:</div>
+                    <div>**** **** **** 1234</div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="payment.html" class="btn">Back to Store</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 eCommerce Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // This script would typically handle any dynamic content or tracking
+        document.addEventListener('DOMContentLoaded', function() {
+            // You could add code here to:  
+            // 1. Fetch order details from URL parameters
+            // 2. Track conversion events
+            // 3. Set up print functionality
+            
+            // Example of getting order ID from URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const orderId = urlParams.get('order_id');
+            
+            if (orderId) {
+                // Update the order number display
+                document.querySelector('p strong').textContent = '#' + orderId;
+            }
+        });
+    </script>
+</body>
+</html>
